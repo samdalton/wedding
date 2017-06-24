@@ -10,19 +10,32 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;
+        position:relative;
       }
-      @media (max-width: 736px) {
+
+      @media (max-device-width: 768px) {
         body {
           width: 100%;
           background-position: top;
           background-size: 100%;
         }
       }
+
       #main {
         padding: 10px 20px;
         margin: 30px 80px;
         background: #fff;
         opacity: 0.85;
+      }
+
+      .copyright {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0.5;
+        font-size: 8px;
+        color: #aaa;
+        padding: 5px;
       }
 
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
@@ -95,5 +108,6 @@
       <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FIRST_NAME';ftypes[1]='text';fnames[2]='LAST_NAME';ftypes[2]='text';fnames[3]='POSTAL';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
       <!--End mc_embed_signup-->
     </div>
+    <div class='copyright'>Photo Copyright The Hearts Haven 2016</div>
   </body>
 </html>
