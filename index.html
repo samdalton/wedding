@@ -13,14 +13,6 @@
         position:relative;
       }
 
-      @media (max-device-width: 768px) {
-        body {
-          width: 100%;
-          background-position: top;
-          background-size: 100%;
-        }
-      }
-
       #main {
         padding: 10px 20px;
         margin: 30px 80px;
@@ -36,6 +28,28 @@
         font-size: 8px;
         color: #aaa;
         padding: 5px;
+      }
+
+      @media (max-device-width: 768px) {
+        body {
+          width: 100%;
+          background-position: top;
+          background-size: 100%;
+        }
+
+        #mc_embed_signup label, #mc_embed_signup input {
+          font-size: 200%;
+        }
+
+        #main {
+          margin: 30px;
+        }
+        
+        .copyright {
+          position: relative;
+          color: #000;
+          text-align: right;
+        }
       }
 
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
@@ -58,11 +72,11 @@
               <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
             <div class="mc-field-group">
-              <label for="mce-FIRST_NAME">First Name </label>
+              <label for="mce-FIRST_NAME">First Name(s)</label>
               <input type="text" value="" name="FIRST_NAME" class="" id="mce-FIRST_NAME">
             </div>
             <div class="mc-field-group">
-              <label for="mce-LAST_NAME">Last Name </label>
+              <label for="mce-LAST_NAME">Last Name(s)</label>
               <input type="text" value="" name="LAST_NAME" class="" id="mce-LAST_NAME">
             </div>
             <div class="mc-address-group">
