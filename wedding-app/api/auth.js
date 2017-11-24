@@ -6,6 +6,7 @@ const ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
 const users = [{
   name: 'sam',
   id: '1234',
+  lang: 'en-nz',
 }];
 
 export const findUser = (id, done) => (

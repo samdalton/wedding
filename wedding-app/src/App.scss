@@ -1,16 +1,21 @@
 .container {
   position: absolute;
   height: 100%;
-  display: flex; }
+  display: flex;
+}
 
 .navigation {
   padding: 32px 16px;
   width: 150px;
-  border-right: 1px solid #666; }
-  .navigation .item {
+  border-right: 1px solid #666;
+
+  .item {
     display: block;
     padding-bottom: 8px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+  }
+}
 
 .content {
-  padding: 32px; }
+  padding: 32px;
+}
