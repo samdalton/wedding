@@ -1,4 +1,24 @@
-$red: #c73036;
+$grey: #857D7F;
+$blue: #16A9F7;
+$green: #8A9C44;
+$orange: #F3964A;
+$gold: #FEDC65;
+
+.bg-grey {
+  background-color: $grey;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-orange {
+  background-color: $orange;
+}
+.bg-gold {
+  background-color: $gold;
+}
 
 .container {
   position: absolute;
@@ -56,16 +76,17 @@ p {
 
 p:first-of-type::first-letter {
   font-size: 26px;
+  text-transform: uppercase;
 }
 
 a {
-  color: $red;
+  color: $orange;
   font-family: Georgia, serif;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #333333;
+  color: $grey;
   text-decoration: underline;
 }
 
