@@ -16,13 +16,12 @@
 .container {
   position: absolute;
   height: 100%;
-  display: flex;
-}
+  display: flex; }
 
 .navigation {
   padding: 54px 16px;
   width: 150px;
-  border-right: 1px solid #999; }
+  border-right: 1px solid #857D7F; }
   .navigation .item {
     display: block;
     padding-bottom: 8px;
@@ -50,6 +49,9 @@ h2 {
   font-weight: normal;
   line-height: 26px;
   margin: 42px 0; }
+
+h2::first-letter {
+  text-transform: uppercase; }
 
 p {
   color: #333333;
@@ -81,14 +83,12 @@ time {
   font-style: italic; }
 
 .subtext {
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 .swatches {
   width: 500px;
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .swatch {
   height: 120px;
@@ -96,5 +96,4 @@ time {
   color: white;
   padding: 8px;
   margin-right: 8px;
-  text-align: right;
-}
+  text-align: right; }

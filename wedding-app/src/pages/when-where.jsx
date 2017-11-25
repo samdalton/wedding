@@ -3,7 +3,7 @@ import React from 'react';
 export const WhenWhere = () => (
   <section>
     <h1>When &amp; Where</h1>
-    <p>The Wedding Day events will all be taking place at the lovely <a href="https://www.sunsetranchhawaii.com/" target="_blank" rel="noopener noreferrer">Sunset Ranch</a>, Oahu, Hawaii.
+    <p>The Wedding Day events will all be taking place at the lovely <a href="https://www.sunsetranchhawaii.com/" target="_blank" rel="noopener noreferrer">Sunset Ranch</a>, on the North Shore of the Hawaiian Island, Oahu.
     </p>
     <p>
       The date is <time>Friday the 5th of October, 2018</time>.{' '}
