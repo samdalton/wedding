@@ -21,9 +21,6 @@ export const UserEntity = {
     language: {
       type: 'varchar',
     },
-    originAirport: {
-      type: 'varchar',
-    },
   },
 };
 

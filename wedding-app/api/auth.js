@@ -26,9 +26,10 @@ export const initAuth = (app, connection) => {
 
   app.use(session({
     secret: 'catdog',
-    resave: true,
+    resave: false,
     saveUninitialized: true,
     cookie: {
+      httpOnly: false,
       maxAge: ONE_YEAR,
     },
   }));

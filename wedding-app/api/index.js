@@ -1,12 +1,15 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import passport from 'passport';
 import path from 'path';
 import { readFile } from 'fs';
 
 import { initAuth } from './auth';
 import { initDB } from './db';
+import { createIntro } from './models/intro';
 
 const app = express();
+app.use(bodyParser.json());
 
 initDB(app, (connection) => {
   const findUser = initAuth(app, connection);
@@ -31,7 +34,7 @@ initDB(app, (connection) => {
       });
     } else if (req.user) {
       // Don't glob any path with an extension
-      if (req.path.indexOf('.') > -1) {
+      if (req.path.indexOf('static') > -1) {
         return next();
       }
 
@@ -46,6 +49,5 @@ initDB(app, (connection) => {
   });
 
   app.use(express.static(path.join(__dirname, '..', 'build')));
-
   app.listen(3001);
 });

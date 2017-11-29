@@ -17,7 +17,6 @@ import { FlightsAccommo } from './pages/flights-accommo';
 import { AttireColors } from './pages/attire-colors';
 import { Activities } from './pages/activities';
 import { Gifts } from './pages/gifts';
-import { Note } from './pages/note';
 
 const store = createStore(reducers, window.__INITIAL_STATE__);
 
@@ -40,7 +39,6 @@ class StaticApp extends Component {
             <Link to="/attire-colors">{copy.attireLabel}</Link>
             <Link to="/gifts">Gifts</Link>
             <Link to="/activities">Activities</Link>
-            <Link to="/leave-a-note">Meet the guests</Link>
           </div>
 
           <div className="content">
@@ -50,7 +48,6 @@ class StaticApp extends Component {
             <Route exact path="/attire-colors" component={AttireColors} />
             <Route exact path="/gifts" component={Gifts} />
             <Route exact path="/activities" component={Activities} />
-            <Route exact path="/leave-a-note" component={Note} />
           </div>
         </div>
       </Router>

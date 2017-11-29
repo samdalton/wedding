@@ -14,7 +14,6 @@ export const initDB = (app, done) => {
     synchronize: false,
     logging: false,
     entitySchemas: [
-      IntroEntity,
       UserEntity,
     ],
   }).then((connection) => {
