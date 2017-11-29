@@ -1,15 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-import { copy } from '../copy';
-
-const origin = copy.originAirport;
-let flightLink = `https://www.hipmunk.com/flights#f=${origin};t=HNL;d=2018-10-02;r=2018-10-07;is_search_for_business=false`;
-// TODO move out of copy
-if (copy.weddingWings) {
-  flightLink = 'wedding-wings';
-};
-
-export const FlightsAccommo = () => (
+export const Flights = ({ user }) => (
   <section>
     <h1>Flights &amp; Accommodation</h1>
     <p>
@@ -18,12 +10,8 @@ export const FlightsAccommo = () => (
     </p>
 
     <p>
-      We suggest searching for flights here: <a href={flightLink} target="blank" rel="noopener noreferrer">flight search</a>.{' '}
-      {copy.weddingWings ? (
-        <div>
-          If you book with this, you'll receive 5% off each roundtrip flight. If 25 of our friends and family use this code, we'll get upgraded to first class ;)
-        </div>
-      ) : null}
+      If you book with Hawaiian Airlines, you'll receive 5% off each roundtrip flight. If 25 of our friends and family use this code, we'll get upgraded to first class ;)
+      Visit our link here: <a href="https://apps.hawaiianairlines.com/specialevents/CosmosWeddingWings/Login/Guest/" target="blank" rel="noopener noreferrer">flight search</a> and use the code <strong>{process.env.REACT_APP_WEDDING_WINGS_CODE}</strong>, last name <strong>Dalton</strong>.
     </p>
 
     <p>
@@ -32,3 +20,4 @@ export const FlightsAccommo = () => (
   </section>
 );
 
+export const FlightsAccommo = connect(state => state)(Flights);

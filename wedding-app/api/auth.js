@@ -1,21 +1,25 @@
 import passport from 'passport';
 import session from 'express-session';
 
+import { User } from './models/user';
+
 const ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
 
-const users = [{
-  name: 'sam',
-  id: '1234',
-  lang: 'en-nz',
-}];
+export const initAuth = (app, connection) => {
+  const findUser = (id, done) => (
+    connection.getRepository(User)
+    .createQueryBuilder("user")
+    .where("user.apiKey = :id", { id })
+    .getOne()
+    .then((user) => done(null, user))
+    .catch((e) => {
+      console.error('Find user error', e);
+      done(e);
+    })
+  );
 
-export const findUser = (id, done) => (
-  done(null, users.find(u => u.id === id))
-);
-
-export const init = (app) => {
   passport.serializeUser((user, done) => {
-    done(null, user.id);
+    done(null, user.apiKey);
   });
 
   passport.deserializeUser(findUser);
@@ -30,4 +34,6 @@ export const init = (app) => {
   }));
   app.use(passport.initialize());
   app.use(passport.session());
+
+  return findUser;
 }
