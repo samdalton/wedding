@@ -6,7 +6,6 @@ import { readFile } from 'fs';
 
 import { initAuth } from './auth';
 import { initDB } from './db';
-import { createIntro } from './models/intro';
 
 const app = express();
 app.use(bodyParser.json());
