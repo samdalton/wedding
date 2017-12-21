@@ -4,6 +4,7 @@ const defaultCopy = {
   attireLabel: 'Attire & Colour',
   color: 'colour',
   ambientTemp: 'mid to high 20s',
+  favourite: 'favourite',
 };
  
 export const copy = new LocalizedStrings({
@@ -12,12 +13,10 @@ export const copy = new LocalizedStrings({
    attireLabel: 'Attire & Color',
    color: 'color',
    ambientTemp: 'mid to high 70s',
-   weddingWings: true,
+  favourite: 'favorite',
  },
  'en-nz': {
    ...defaultCopy,
-   originAirport: 'AKL',
-   flightLink: '',
  },
 });
 
