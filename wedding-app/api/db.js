@@ -1,6 +1,5 @@
 import * as typeorm from 'typeorm';
 
-import { Intro, IntroEntity } from './models/intro';
 import { User, UserEntity } from './models/user';
 
 export const initDB = (app, done) => {
