@@ -1,1 +1,1 @@
-$(cat constants.sh | xargs) && yarn run forever
+$(cat constants.sh | xargs) && yarn run start-forever
