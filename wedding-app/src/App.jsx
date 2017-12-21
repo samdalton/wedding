@@ -18,7 +18,11 @@ import { AttireColors } from './pages/attire-colors';
 import { Activities } from './pages/activities';
 import { Gifts } from './pages/gifts';
 
-const store = createStore(reducers, window.__INITIAL_STATE__);
+const store = createStore(
+  reducers,
+  window.__INITIAL_STATE__,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const Link = (props) => <NavLink activeClassName="active" className="item" {...props} />;
 
@@ -26,6 +30,10 @@ const Link = (props) => <NavLink activeClassName="active" className="item" {...p
 class StaticApp extends Component {
   componentWillMount() {
     setLanguage(this.props.user.language || 'en-us');
+  }
+
+  componentDidMount() {
+    amplitude.getInstance().setUserProperties(this.props.user); // eslint-disable-line
   }
 
   render () {

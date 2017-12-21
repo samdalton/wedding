@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { copy } from '../copy';
+import Wrapper from './wrapper';
 
 export const Activities = () => (
-  <section>
+  <Wrapper page="activities">
     <h1>Activities</h1>
-    <p>We know you're coming a long way to celebrate with us, so here are some our fa{copy.favourite} suggestions to make the most of the trip.</p>
+    <p>We know you're coming a long way to celebrate with us, so here are some our of {copy.favourite} suggestions to make the most of the trip.</p>
     <h2>Food</h2>
     <ul>
       <li>
@@ -45,6 +46,6 @@ export const Activities = () => (
       </li>
 
     </ul>
-  </section>
+  </Wrapper>
 );
 

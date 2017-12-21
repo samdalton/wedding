@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { copy } from '../copy';
+import Wrapper from './wrapper';
 
 export const AttireColors = () => (
-  <section>
+  <Wrapper page="attire">
     <h1>{copy.attireLabel}</h1>
     <h2>{copy.color} Scheme</h2>
     <div className="swatches">
@@ -24,6 +25,6 @@ export const AttireColors = () => (
     <p>
       The ceremony and cocktail hour will be on grass, and the reception in a barn so simpler footwear is encouraged.
     </p>
-  </section>
+  </Wrapper>
 );
 
