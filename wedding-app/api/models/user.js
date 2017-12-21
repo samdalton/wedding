@@ -3,12 +3,8 @@ export class User {};
 export const UserEntity = {
   target: User,
   columns: {
-    id: {
-      primary: true,
-      generated: true,
-      type: 'uuid',
-    },
     apiKey: {
+      primary: true,
       type: 'varchar',
     },
     createdAt: {
