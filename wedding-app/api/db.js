@@ -6,11 +6,11 @@ import { User, UserEntity } from './models/user';
 export const initDB = (app, done) => {
   typeorm.createConnection({
     type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'wedding',
-    password: 'hawaii',
-    database: 'wedding',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     synchronize: false,
     logging: false,
     entitySchemas: [
