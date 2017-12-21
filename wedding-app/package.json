@@ -7,6 +7,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
+    "connect-redis": "^3.3.2",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "forever": "^0.15.3",
@@ -28,11 +29,10 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-forever": "$(cat constants.sh | xargs) forever start index.js",
+    "start-forever": "forever start index.js",
     "stop-forever": "forever stop index.js",
-    "server": "$(cat constants.sh | xargs) node index.js",
+    "server": "$(cat constants.sh | xargs) && node index.js",
     "client": "react-scripts start",
-    "env": "",
     "build": "$(cat constants.sh | xargs) && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

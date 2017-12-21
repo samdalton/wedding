@@ -1,5 +1,6 @@
 import passport from 'passport';
 import session from 'express-session';
+import createRedisStore from 'connect-redis';
 
 import { User } from './models/user';
 
@@ -24,7 +25,12 @@ export const initAuth = (app, connection) => {
 
   passport.deserializeUser(findUser);
 
+  const RedisStore = createRedisStore(session);
   app.use(session({
+    store: new RedisStore({
+      host: 'localhost',
+      port: 6379,
+    }),
     secret: 'catdog',
     resave: false,
     saveUninitialized: true,
