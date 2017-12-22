@@ -97,3 +97,6 @@ time {
   padding: 8px;
   margin-right: 8px;
   text-align: right; }
+
+a:hover {
+  cursor: pointer; }

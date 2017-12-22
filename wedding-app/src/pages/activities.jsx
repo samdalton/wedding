@@ -2,6 +2,7 @@ import React from 'react';
 
 import { copy } from '../copy';
 import Wrapper from './wrapper';
+import Link from './tracked-link';
 
 export const Activities = () => (
   <Wrapper page="activities">
@@ -10,42 +11,41 @@ export const Activities = () => (
     <h2>Food</h2>
     <ul>
       <li>
-        <a href="https://www.yelp.com/biz/giovannis-shrimp-truck-kahuku" rel="noopener noreferrer" target="_blank">Giovanni's Shrimp Truck</a>
+        <Link href="https://www.yelp.com/biz/giovannis-shrimp-truck-kahuku">Giovanni's Shrimp Truck</Link>
       </li>
       <li>
-      <a href="https://www.yelp.com/biz/crispy-grindz-haleiwa" rel="noopener noreferrer" target="_blank">Crispy Grindz</a>
+      <Link href="https://www.yelp.com/biz/crispy-grindz-haleiwa">Crispy Grindz</Link>
       </li>
       <li>
-      <a href="https://www.yelp.com/biz/no7-japanese-food-truck-haleiwa" rel="noopener noreferrer" target="_blank">No7 Japanese Food Truck</a>
+      <Link href="https://www.yelp.com/biz/no7-japanese-food-truck-haleiwa">No7 Japanese Food Truck</Link>
       </li>
     </ul>
 
     <h2>Hikes/Drives</h2>
     <ul>
       <li>
-        <a href="https://www.alltrails.com/trail/us/hawaii/pupukea-summit-trail--2" rel="noopener noreferrer" target="_blank">Pupukea Trail</a>
+        <Link href="https://www.alltrails.com/trail/us/hawaii/pupukea-summit-trail--2">Pupukea Trail</Link>
       </li>
       <li>
-        <a href="https://www.alltrails.com/trail/us/hawaii/diamond-head-leahi-summit-trail" rel="noopener noreferrer" target="_blank">Diamond Head Summit Trail</a>
+        <Link href="https://www.alltrails.com/trail/us/hawaii/diamond-head-leahi-summit-trail">Diamond Head Summit Trail</Link>
       </li>
       <li>
-        <a href="https://en.wikipedia.org/wiki/Interstate_H-3" rel="noopener noreferrer" target="_blank">Interstate H3 to Kaneohe</a>
+        <Link href="https://en.wikipedia.org/wiki/Interstate_H-3">Interstate H3 to Kaneohe</Link>
       </li>
     </ul>
       
     <h2>Activities</h2>
     <ul>
       <li>
-        <a href="https://www.pacificaviationmuseum.org/" rel="noopener noreferrer" target="_blank">Pearl Harbor Museum</a>
+        <Link href="https://www.pacificaviationmuseum.org/">Pearl Harbor Museum</Link>
       </li>
       <li>
-        <a href="http://byodo-in.com/" rel="noopener noreferrer" target="_blank">Byodo-in Buddhist Temple</a>
+        <Link href="http://byodo-in.com/">Byodo-in Buddhist Temple</Link>
       </li>
       <li>
-        <a href="https://www.google.com/maps/place/Three+Tables+Beach/@21.6456992,-158.0633244,17z/data=!4m13!1m7!3m6!1s0x7c006632db726b03:0xd9587d69906fcbc3!2zT-KAmGFodQ!3b1!8m2!3d21.4389123!4d-158.0000565!3m4!1s0x7c005993bc6084ab:0xbdd6c5c996e7c995!8m2!3d21.6459381!4d-158.0638942?hl=en" rel="noopener noreferrer" target="_blank">Three Tables Beach (great for small children)</a>
+        <Link href="https://www.google.com/maps/place/Three+Tables+Beach/@21.6456992,-158.0633244,17z/data=!4m13!1m7!3m6!1s0x7c006632db726b03:0xd9587d69906fcbc3!2zT-KAmGFodQ!3b1!8m2!3d21.4389123!4d-158.0000565!3m4!1s0x7c005993bc6084ab:0xbdd6c5c996e7c995!8m2!3d21.6459381!4d-158.0638942?hl=en">Three Tables Beach (great for small children)</Link>
       </li>
 
     </ul>
   </Wrapper>
 );
-
