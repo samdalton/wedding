@@ -34,6 +34,7 @@ class StaticApp extends Component {
 
   componentDidMount() {
     amplitude.getInstance().setUserProperties(this.props.user); // eslint-disable-line
+    amplitude.getInstance().setUserId(this.props.user.apiKey); // eslint-disable-line
   }
 
   render () {

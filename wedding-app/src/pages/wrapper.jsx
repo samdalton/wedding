@@ -3,9 +3,8 @@ import { connect } from 'react-redux'
 
 class Wrapper extends Component {
   componentDidMount() {
-    amplitude.getInstance().logEvent('PAGE_VIEW', { // eslint-disable-line
-      page: this.props.page,
-    });
+    const page = this.props.page;
+    amplitude.getInstance().logEvent(`page view:${page}`); // eslint-disable-line
   }
 
   render() {
