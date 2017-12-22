@@ -14,7 +14,7 @@ export const Flights = () => (
     <h2>Flights</h2>
     <p>
       If you book with Hawaiian Airlines, you'll receive 5% off each roundtrip flight. If 25 of our friends and family use this code, we'll get upgraded to first class ;)
-      Visit our link here: <Link href="https://apps.hawaiianairlines.com/specialevents/CosmosWeddingWings/Login/Guest/">flight search</Link> and use the code <strong>{process.env.REACT_APP_WEDDING_WINGS_CODE}</strong>, last name <strong>Dalton</strong>.
+      Visit our link here on <Link href="https://apps.hawaiianairlines.com/specialevents/CosmosWeddingWings/Login/Guest/">Hawaiian Airlines</Link> and use the code <strong>{process.env.REACT_APP_WEDDING_WINGS_CODE}</strong>, last name <strong>Dalton</strong>.
     </p>
 
     <h2>Accomodation</h2>

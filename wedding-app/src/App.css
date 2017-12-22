@@ -20,12 +20,45 @@
 
 .navigation {
   padding: 54px 16px;
-  width: 150px;
-  border-right: 1px solid #857D7F; }
+  width: 170px;
+  position: relative; }
   .navigation .item {
     display: block;
     padding-bottom: 8px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    z-index: 1; }
+  .navigation .flower {
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    z-index: 0; }
+
+.nav-menu {
+  display: none; }
+
+@media (max-width: 375px) {
+  .navigation {
+    display: none;
+    padding: 25px 32px;
+    width: stretch;
+    position: absolute;
+    background: white;
+    box-shadow: #857D7F 0px 4px 8px 0px; }
+    .navigation .flower {
+      display: none; }
+  .navigation.show {
+    display: block; }
+  .nav-menu {
+    display: block;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 20; }
+    .nav-menu img {
+      opacity: 0.6; }
+    .nav-menu img:hover {
+      opacity: 0.8;
+      pointer: cursor; } }
 
 .content {
   padding: 32px;
@@ -97,6 +130,14 @@ time {
   padding: 8px;
   margin-right: 8px;
   text-align: right; }
+
+@media (max-width: 375px) {
+  .swatches {
+    width: auto;
+    flex-direction: column;
+    height: 160px; }
+  .swatch {
+    width: 90%; } }
 
 a:hover {
   cursor: pointer; }
