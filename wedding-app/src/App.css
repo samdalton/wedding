@@ -13,6 +13,9 @@
 .bg-gold {
   background-color: #FEDC65; }
 
+body {
+  background: #FEFDFA; }
+
 .container {
   position: absolute;
   height: 100%;
