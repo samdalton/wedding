@@ -78,10 +78,6 @@ $gold: #FEDC65;
     img {
       opacity: 0.6;
     }
-    img:hover {
-      opacity: 0.8;
-      pointer: cursor;
-    }
   }
 }
 
@@ -94,6 +90,16 @@ $gold: #FEDC65;
   border: 10px solid #ffefef;
 }
 
+@media (max-width: 375px) {
+  .postcard-image {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+  }
+}
+
 // Type
 h1 {
   color: #333333;
@@ -102,6 +108,13 @@ h1 {
   font-weight: normal;
   line-height: 54px;
   margin: 0 0 54px;
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 40px;
+  line-height: 44px;
+  }
 }
 
 h2 {
