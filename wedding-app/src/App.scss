@@ -26,6 +26,10 @@ $gold: #FEDC65;
   display: flex;
 }
 
+section {
+  padding-bottom: 24px;
+}
+
 .navigation {
   padding: 54px 16px;
   width: 170px;
@@ -55,7 +59,8 @@ $gold: #FEDC65;
     display: none;
     padding: 25px 32px;
     width: stretch;
-    position: absolute;
+    position: fixed;
+    top: 0px;
     background: white;
     box-shadow: #857D7F 0px 4px 8px 0px;
 
