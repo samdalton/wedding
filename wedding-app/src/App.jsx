@@ -16,6 +16,7 @@ import { FlightsAccommo } from './pages/flights-accommo';
 import { AttireColors } from './pages/attire-colors';
 import { Activities } from './pages/activities';
 import { Gifts } from './pages/gifts';
+import { RSVP } from './pages/rsvp';
 import Nav from './nav';
 
 const store = createStore(
@@ -47,6 +48,7 @@ class StaticApp extends Component {
             <Route exact path="/attire-colors" component={AttireColors} />
             <Route exact path="/gifts" component={Gifts} />
             <Route exact path="/activities" component={Activities} />
+            <Route exact path="/rsvp" component={RSVP} />
           </div>
         </div>
       </Router>

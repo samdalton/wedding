@@ -20,6 +20,10 @@ $gold: #FEDC65;
   background-color: $gold;
 }
 
+.block {
+  display: block;
+}
+
 body {
   background: #FEFDFA;
 }
@@ -208,4 +212,9 @@ time {
 
 a:hover {
   cursor: pointer;
+}
+
+.rsvp a {
+  margin-bottom: 14px;
+  font-size: 20px;
 }

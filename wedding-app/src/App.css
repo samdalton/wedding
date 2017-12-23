@@ -13,6 +13,9 @@
 .bg-gold {
   background-color: #FEDC65; }
 
+.block {
+  display: block; }
+
 body {
   background: #FEFDFA; }
 
@@ -156,3 +159,7 @@ time {
 
 a:hover {
   cursor: pointer; }
+
+.rsvp a {
+  margin-bottom: 14px;
+  font-size: 20px; }

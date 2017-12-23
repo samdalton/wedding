@@ -1,12 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import us from '../images/us.jpg';
 import Wrapper from './wrapper';
 
-export const Home = () => (
+const StaticHome = ({ user }) => (
   <Wrapper page="home">
     <h1>Angela and Sam</h1>
-    <p>Welcome to our wedding website!</p>
+    {user && user.firstName ? (
+      <p>Dear {user.firstName}, welcome to our wedding website!</p>
+    ) : (
+      <p>Welcome to our wedding website!</p>
+    )}
     <p>Here you will find everything you need to know about attending our wedding on <time>October 5th, 2018</time>.</p>
     <img
       className="postcard-image"
@@ -16,3 +21,5 @@ export const Home = () => (
     />
   </Wrapper>
 );
+
+export const Home = connect(state => state)(StaticHome);
