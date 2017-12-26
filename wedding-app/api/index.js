@@ -10,6 +10,16 @@ import { initDB } from './db';
 const app = express();
 app.use(bodyParser.json());
 
+let indexHtml;
+readFile(path.join(__dirname, '..', 'build', 'index.html'), (err, data) => {
+  indexHtml = data.toString();
+});
+
+let failHtml;
+readFile(path.join(__dirname, '..', 'build', 'fail.html'), (err, data) => {
+  failHtml = data.toString();
+});
+
 initDB(app, (connection) => {
   const findUser = initAuth(app, connection);
 
@@ -19,7 +29,7 @@ initDB(app, (connection) => {
   });
 
   app.get('/fail', (req, res) => {
-    res.json({status: 'bad'});
+    return res.send(failHtml);
   });
 
   app.get('/*', (req, res, next) => {
@@ -37,11 +47,8 @@ initDB(app, (connection) => {
         return next();
       }
 
-      return readFile(path.join(__dirname, '..', 'build', 'index.html'), (err, data) => {
-        let html = data.toString();
-        html = html.replace('__USER__', JSON.stringify({ user: req.user }));
-        return res.send(html);
-      });
+      const html = indexHtml.replace('__USER__', JSON.stringify({ user: req.user }));
+      return res.send(html);
     }
 
     return res.redirect('/fail');
