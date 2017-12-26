@@ -73,7 +73,7 @@ class StaticRSVP extends Component {
         <h1>RSVP</h1>
         <p>To help us with our planning, we'd love to know as early as possible if you're going to make it or not.</p>
         <p>If you're still waiting to decide, that's fine! We'll follow up in the New Year with a formal invite.</p> 
-        <p>Otherwise, let us know how many people to expect (including yourself), or 0 if you can't make it.</p>
+        <p>Otherwise, let us know how many people to expect (including yourself). If you can't make it, put 0.</p>
         { this.state.responded ? this.renderThanks() : this.renderOptions() }
       </Wrapper>
     );
