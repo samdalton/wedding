@@ -74,7 +74,7 @@ class StaticRSVP extends Component {
         <p>To help us with our planning, we'd love to know as early as possible if you're going to make it or not.</p>
         <p>Let us know how many people to expect (including yourself), and then click submit. If you can't make it, put 0 and submit.</p>
         { this.state.responded ? this.renderThanks() : this.renderOptions() }
-        <p style={{ marginTop: 36 }}>If you're still waiting to decide, that's OK. We'll follow up in the New Year with a formal invite and RSVP.</p> 
+        <p style={{ marginTop: 36 }}>If you're still waiting to decide, that's okay. We'll follow up in the New Year with a formal invite and RSVP.</p> 
       </Wrapper>
     );
   }
