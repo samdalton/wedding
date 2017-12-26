@@ -10,7 +10,7 @@ export const WhenWhere = () => (
     </p>
     <p>
       The date is <time>Friday the 5th of October, 2018</time>.{' '}
-      <a className="subtext" href={`${process.env.PUBLIC_URL}/invite.ics`}>(Download calendar event)</a>
+      <a className="subtext" href="/static/invite.ics">(Download calendar event)</a>
     </p>
     <p>Arrive at <time>3:30pm</time> for a <time>4pm</time> ceremony start time. The event will end at <time>9pm</time>.</p>
     <p>A shuttle will pick up guests at <Link href="https://www.google.com/maps/place/Turtle+Bay+Resort/@21.7013641,-157.9891112,15z/data=!4m12!1m6!3m5!1s0x7c00504fe1e96419:0x1ee8f68b7f5c0bec!2sTurtle+Bay+Resort!8m2!3d21.704397!4d-157.9979769!3m4!1s0x7c00504fe1e96419:0x1ee8f68b7f5c0bec!8m2!3d21.704397!4d-157.9979769?hl=en">Turtle Bay Resort</Link> and return after the event. There is <em>no</em> parking at the venue.</p>
