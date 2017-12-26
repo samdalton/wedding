@@ -34,7 +34,7 @@ const Nav = ({
         <Link to="/flights-accommodation">Flights &amp; Accommodation</Link>
         <Link to="/attire-colors">{copy.attireLabel}</Link>
         <Link to="/gifts">Gifts</Link>
-        <Link to="/activities">Activities</Link>
+        <Link to="/things-to-do">Things To Do</Link>
         <Link to="/rsvp">RSVP</Link>
         <Flower />
       </div>

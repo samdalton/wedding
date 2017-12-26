@@ -6,7 +6,7 @@ import Link from './tracked-link';
 export const WhenWhere = () => (
   <Wrapper page="when">
     <h1>When &amp; Where</h1>
-    <p>The Wedding Day events will all be taking place at the lovely <Link href="https://www.sunsetranchhawaii.com/">Sunset Ranch</Link>, on the North Shore of the Hawaiian island, Oahu.
+    <p>The wedding day events will all be taking place at the lovely <Link href="https://www.sunsetranchhawaii.com/">Sunset Ranch</Link>, on the North Shore of the Hawaiian island, Oahu.
     </p>
     <p>
       The date is <time>Friday the 5th of October, 2018</time>.{' '}

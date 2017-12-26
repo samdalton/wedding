@@ -4,10 +4,10 @@ import { copy } from '../copy';
 import Wrapper from './wrapper';
 import Link from './tracked-link';
 
-export const Activities = () => (
-  <Wrapper page="activities">
-    <h1>Activities</h1>
-    <p>We know you're coming a long way to celebrate with us, so here are some of our {copy.favourite} suggestions to make the most of the trip.</p>
+export const ThingsToDo = () => (
+  <Wrapper page="things-to-do">
+    <h1>Things To Do</h1>
+    <p>We know you're coming a long way to celebrate with us, so here are some of our {copy.favourite} suggestions to make the most of your time on the island.</p>
     <h2>Food</h2>
     <ul>
       <li>
