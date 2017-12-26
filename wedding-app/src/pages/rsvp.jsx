@@ -62,7 +62,7 @@ class StaticRSVP extends Component {
           <span className="rsvp-count" >{this.state.count}</span>
           <span className="stepper" onClick={this.handleUpCount}>+</span>
         </div>
-        <a onClick={this.handleResponse}>Submit RSVP</a>
+        <a onClick={this.handleResponse}>Submit</a>
       </div>
     );
   }
@@ -70,12 +70,11 @@ class StaticRSVP extends Component {
   render() {
     return (
       <Wrapper page="rsvp">
-        <h1>RSVP</h1>
+        <h1>Can we expect you?</h1>
         <p>To help us with our planning, we'd love to know as early as possible if you're going to make it or not.</p>
-        <p>Let us know how many people to expect (including yourself), and then submit your RSVP.</p>
-        <p>If you can't make it, put 0 and submit.</p>
+        <p>Let us know how many people to expect (including yourself), and then click submit. If you can't make it, put 0 and submit.</p>
         { this.state.responded ? this.renderThanks() : this.renderOptions() }
-        <p>If you're still waiting to decide, that's OK. We'll follow up in the New Year with a formal invite.</p> 
+        <p style={{ marginTop: 36 }}>If you're still waiting to decide, that's OK. We'll follow up in the New Year with a formal invite and RSVP.</p> 
       </Wrapper>
     );
   }
