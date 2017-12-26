@@ -218,3 +218,23 @@ a:hover {
   margin-bottom: 14px;
   font-size: 20px;
 }
+
+.stepper {
+  padding: 16px;
+  font-size: 24px;
+  color: $grey;
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.rsvp-count {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.counter {
+  margin-bottom: 16px;
+}

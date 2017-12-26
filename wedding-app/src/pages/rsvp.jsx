@@ -1,30 +1,48 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Wrapper from './wrapper';
 import cookie from 'js-cookie';
 
-export class RSVP extends Component {
-  constructor() {
-    super();
+class StaticRSVP extends Component {
+  constructor(props) {
+    super(props);
+
+    const name = this.props.user && this.props.user.firstName;
+    const parts = (name || "").split(' ').filter((n) => n !== 'and');
 
     this.state = {
       responded: cookie.get('rsvpd'),
+      count: parts.length,
     };
 
     this.handleResponse = this.handleResponse.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.handleUpCount = this.handleUpCount.bind(this);
+    this.handleDownCount = this.handleDownCount.bind(this);
   }
 
-  handleResponse(going) {
-    amplitude.getInstance().logEvent('rsvp', { going }); // eslint-disable-line
-    const identify = new amplitude.Identify().set('rsvp', going); // eslint-disable-line
+  handleResponse() {
+    const going = this.state.count > 0;
+
+    amplitude.getInstance().logEvent('rsvp', { going, count: this.state.count }); // eslint-disable-line
+    const identify = new amplitude.Identify().set('rsvp', going).set('rsvp_count', this.state.count); // eslint-disable-line
     amplitude.getInstance().identify(identify); // eslint-disable-line
     this.setState({ responded: true });
     cookie.set('rsvpd', true);
   }
 
+  handleUpCount() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  handleDownCount() {
+    this.setState({ count: Math.max(0, this.state.count - 1) });
+  }
+
   handleReset() {
     this.setState({ responded: false });
     cookie.set('rsvpd', false);
+    amplitude.getInstance().logEvent('change-rsvp'); // eslint-disable-line
   }
 
   renderThanks() {
@@ -39,8 +57,12 @@ export class RSVP extends Component {
   renderOptions() {
     return (
       <div className="rsvp">
-        <a onClick={() => { this.handleResponse('yes'); }} className="block">Count us in!</a>
-        <a onClick={() => { this.handleResponse('no'); }} className="block">Unfortunately can't make it</a>
+        <div className="counter">
+          <span className="stepper" onClick={this.handleDownCount}>-</span>
+          <span className="rsvp-count" >{this.state.count}</span>
+          <span className="stepper" onClick={this.handleUpCount}>+</span>
+        </div>
+        <a onClick={this.handleResponse}>Submit RSVP</a>
       </div>
     );
   }
@@ -50,10 +72,12 @@ export class RSVP extends Component {
       <Wrapper page="rsvp">
         <h1>RSVP</h1>
         <p>To help us with our planning, we'd love to know as early as possible if you're going to make it or not.</p>
-        <p>If you're still waiting to decide, that's fine! We'll follow up closer to the event with a formal RSVP.</p> 
-        <p>Otherwise, click one of the options below to let us know.</p>
+        <p>If you're still waiting to decide, that's fine! We'll follow up in the New Year with a formal invite.</p> 
+        <p>Otherwise, let us know how many people to expect, or 0 if you can't make it.</p>
         { this.state.responded ? this.renderThanks() : this.renderOptions() }
       </Wrapper>
     );
   }
 }
+
+export const RSVP = connect(state => state)(StaticRSVP);
