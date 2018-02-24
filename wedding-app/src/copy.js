@@ -5,6 +5,7 @@ const defaultCopy = {
   color: 'colour',
   ambientTemp: 'mid to high 20s',
   favourite: 'favourite',
+  vest: 'waistcoat',
 };
  
 export const copy = new LocalizedStrings({
@@ -14,6 +15,7 @@ export const copy = new LocalizedStrings({
    color: 'color',
    ambientTemp: 'mid to high 70s',
   favourite: 'favorite',
+  vest: 'vest',
  },
  'en-nz': {
    ...defaultCopy,
