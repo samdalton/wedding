@@ -35,7 +35,7 @@ const Nav = ({
         <Link to="/attire-colors">{copy.attireLabel}</Link>
         <Link to="/gifts">Gifts</Link>
         <Link to="/things-to-do">Things To Do</Link>
-        <Link to="/rsvp">Can we expect you?</Link>
+        <Link to="/rsvp">RSVP</Link>
         <Flower />
       </div>
     </div>
