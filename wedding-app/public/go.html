@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <title>Angela and Sam's Wedding</title>
+    <style>
+      body {
+        background: #FEFDFA;
+        padding: 20%;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333333;
+        font-family: 'Bitter', serif;
+        font-size: 50px;
+        font-weight: normal;
+        line-height: 54px;
+        margin: 0 0 54px;
+      }
+
+      @media (max-width: 375px) {
+        h1 {
+          font-size: 40px;
+        line-height: 44px;
+        }
+      }
+
+      p {
+        color: #333333;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 0 24px;
+      }
+
+      p:first-of-type::first-letter {
+        font-size: 26px;
+        text-transform: uppercase;
+      }
+
+      input[type=text] {
+        font-size: 22px;
+        font-family: 'Courier New', 'Courier', 'Bitter', serif;
+        padding: 2px 6px;
+        text-align: center;
+      }
+      input[type=submit] {
+        font-size: 20px;
+        background-color: #FEDC65;
+        font-family: 'Bitter', serif;
+        padding: 4px;
+        cursor: pointer;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        Welcome!
+      </h1>
+      <p>
+        Enter your code below to get started:
+      </p>
+      <form method="GET" action="/">
+        <input type="text" name="id" />
+        <input type="submit" value="Go" />
+      </form>
+    </div>
+  </body>
+</html>

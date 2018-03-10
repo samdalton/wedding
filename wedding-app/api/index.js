@@ -21,6 +21,12 @@ readFile(path.join(__dirname, '..', 'build', 'fail.html'), (err, data) => {
   failHtml = data.toString();
 });
 
+let goHtml;
+readFile(path.join(__dirname, '..', 'build', 'go.html'), (err, data) => {
+  goHtml = data.toString();
+});
+
+
 initDB(app, (connection) => {
   const findUser = initAuth(app, connection);
 
@@ -31,6 +37,10 @@ initDB(app, (connection) => {
 
   app.get('/fail', (req, res) => {
     return res.send(failHtml);
+  });
+
+  app.get('/go', (req, res) => {
+    return res.send(goHtml);
   });
 
   app.get('/*', (req, res, next) => {

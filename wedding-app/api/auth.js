@@ -7,17 +7,20 @@ import { User } from './models/user';
 const ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
 
 export const initAuth = (app, connection) => {
-  const findUser = (id, done) => (
-    connection.getRepository(User)
+  const findUser = (id, done) => {
+    if (!id || id.length < 6) {
+      return done('bad id');
+    }
+    return connection.getRepository(User)
     .createQueryBuilder("user")
-    .where("user.apiKey = :id", { id })
+    .where("user.apiKey like :id", { id: `${id}%` })
     .getOne()
     .then((user) => done(null, user))
     .catch((e) => {
       console.error('Find user error', e);
       done(e);
     })
-  );
+  };
 
   passport.serializeUser((user, done) => {
     done(null, user.apiKey);
