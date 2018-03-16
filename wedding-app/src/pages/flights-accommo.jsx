@@ -20,7 +20,7 @@ export const Flights = () => (
 
     <h2>Accomodation</h2>
     <p>
-      We have block pricing available at the <Link href={process.env.REACT_APP_TURTLE_BAY_URL}>Turtle Bay Resort</Link>. The price is $279/night and the resort fee will be covered by us. While a bit pricer than airbnbs around, it will be the pickup location for the wedding shuttles and other social gatherings such as dinner the night before, so you'll be at the heart of the action.
+      We have block pricing available at the <Link href={process.env.REACT_APP_TURTLE_BAY_URL}>Turtle Bay Resort</Link>. The price is $279/night and the resort fee will be covered by us. While a bit pricer than airbnbs around, it will be the pickup location for the wedding shuttles and other social gatherings such as dinner the night before, so you'll be at the heart of the action. Note: due to Turtle Bay technical limitations, the checkout flow will list the resort fee, but we will have it added as a room credit which can be settled at check-out or spent during your stay.
     </p>
     <p>
       There are also plenty of airbnb houses on the North Shore that are close to the venue. See availability <Link href="https://www.airbnb.com/s/North-Shore-Oahu-Hawaii--Kahuku--HI--United-States/homes?refinement_path=%2Ffor_you&allow_override%5B%5D=&ne_lat=21.727897864222932&ne_lng=-157.95872054797792&sw_lat=21.54162203284362&sw_lng=-158.11252914172792&zoom=12&search_by_map=true&checkin=2018-10-02&checkout=2018-10-07&s_tag=dLSBOgNt">on airbnb</Link>.
