@@ -50,7 +50,12 @@ initDB(app, (connection) => {
           return res.redirect('/fail');
         }
 
-        return req.login(user, () => res.redirect('/'));
+        let goTo = '/';
+        if (req.query.go === 'rsvp') {
+          goTo = '/rsvp';
+        }
+
+        return req.login(user, () => res.redirect(goTo));
       });
     } else if (req.user) {
       // Don't glob any path with an extension
