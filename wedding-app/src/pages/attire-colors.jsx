@@ -7,7 +7,7 @@ export const AttireColors = () => (
   <Wrapper page="attire">
     <h1>{copy.attireLabel}</h1>
     <h2>{copy.color} Scheme</h2>
-    <p>We'll be decorating the venue with these {copy.color}s.</p>
+    <p>We'll be decorating the venue with these {copy.color}s. Feel free to wear them!</p>
     <div className="swatches">
       <div className="swatch bg-gold">Hibiscus Yellow</div>
       <div className="swatch bg-orange">California Poppy Orange</div>

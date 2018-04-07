@@ -78,6 +78,7 @@ class StaticRSVP extends Component {
       <Wrapper page="rsvp">
         <h1>RSVP</h1>
         <p>Coming to the wedding? Let us know! This is our official RSVP page – no need to mail anything else to us.</p>
+        <p>Please RSVP by August 1st.</p>
         <p>Enter the number of people attending (including yourself), and then click submit. If you can't make it, put 0 and submit.</p>
         { this.state.responded ? this.renderThanks() : this.renderOptions() }
       </Wrapper>
