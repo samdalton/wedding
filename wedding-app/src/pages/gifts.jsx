@@ -20,7 +20,7 @@ export const Gifts = () => (
 
     <h2>Registry</h2>
     <p>
-      View our <Link href="https://www.zola.com/registry/samandangelawedding">Gift Registry</Link>.
+      View our <Link href="http://www.heathceramics.com/giftregistry/view/index/id/fd8a192aa51bcb91eaa2c362be3319f6/">gift registry</Link> from Heath Ceramics, a local ceramics manufacturer that we love.
     </p>
   </Wrapper>
 );
