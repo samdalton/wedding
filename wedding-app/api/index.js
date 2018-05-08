@@ -45,7 +45,7 @@ initDB(app, (connection) => {
 
   app.get('/*', (req, res, next) => {
     if (req.query.id) {
-      return findUser(req.query.id, (err, user) => {
+      return findUser(req.query.id.toLowerCase(), (err, user) => {
         if (err || !user) {
           return res.redirect('/fail');
         }
