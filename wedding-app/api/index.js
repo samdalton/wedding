@@ -11,7 +11,10 @@ readFile(path.join(__dirname, '..', 'build', 'index.html'), (err, data) => {
 });
 
 app.get('/*', (req, res, next) => {
-    return res.send(indexHtml);
+  if (req.path.indexOf('static') > -1) {
+    return next();
+  }
+  return res.send(indexHtml);
 });
 
 app.use(compression());
